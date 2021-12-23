@@ -1,21 +1,7 @@
-variable "prefix" {
-  default = "jmcf"
+variable "access_key" {
+  default = ""
 }
 
-variable "rg-name" {
-  default = "coalfireresourcegroup"
-}
-
-variable "location" {
-  default = "eastus"
-}
-
-
-variable "ami" {
-  default = "ami-04505e74c0741db8d"
-}
-
-variable "public_subnet" {
-  type    = list
-  default = ["value"]
+variable "secret_key" {
+  default = ""
 }
