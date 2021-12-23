@@ -12,6 +12,8 @@ A company is looking to create a proof-of-concept environment in AWS. They want 
 - [x] 1 application load balancer that listens on port 80 and forwards traffic to the instance in sub4
 - [x] Subnets should have security groups in place
 - [x] 1 S3 bucket with lifecycle policies
+- [x] Architecture diagram
+- [x] Screenshot of RedHat instance logged in
 
 ## Process
 My process was to initially go down the list of requirements and knock out each item one by one. After I completed every item and was able to get it successfully deployed using 'terraform plan' and 'terraform apply', I then wanted to learn about modules and how to utilize them. I had never used modules in Terraform up until this point so it was a great learning experience and I definitely can see the value in them.
@@ -24,13 +26,14 @@ The autoscaling group and load balancer were what I struggled with the most. I w
 
 Finally, the S3 bucket was one of the AWS resources I was pretty familiar with. This was one of the sections of the challenge where I needed almost no help but did double check the Terraform docs to ensure I was utilizing the lifecycle rules properly.
 
-All in all, it was a great opportunity and learned a lot!
+All in all, it was a great opportunity and learned a lot! I want to continue learning and improve my knowledge of load balancers, autoscaling groups, building architecture diagrams, etc.
 
 ## Resources
 95% of the information I needed and used came directly from the Terraform docs. When I needed to deploy a resource, I would simply Google 'terraform aws load balancer' for example. Other resources I used included:
 
 - https://stackoverflow.com/questions/63147590/terraform-missing-resource-instance-key (used when I ran into 'missing resource instance key' error)
 - https://www.terraform.io/language/functions/element (used when learning how to use the element function)
+- https://www.terraform.io/language/meta-arguments/count (used when learning how to use the count object)
 - https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html (to learn more about target groups)
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html (used when I was running into issues connecting to my instance)
 - https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-checks-alb/ (used to learn why targets had an unhealthy status and to learn about health checks)
@@ -39,6 +42,7 @@ All in all, it was a great opportunity and learned a lot!
 ![screenshot of successfully logging into aws instance](assets/terraform-aws-instance.PNG)
 
 ## Architecture Diagram
+![architecture diagram](assets/coalfire-diagram.PNG)
 
 ## How to Run
 ```bash
