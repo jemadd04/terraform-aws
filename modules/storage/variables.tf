@@ -5,11 +5,11 @@ variable "region" {
 }
 
 variable "access_key" {
-  default = "AKIATF6QK54SGEJRJVMO"
+  default = ""
 }
 
 variable "secret_key" {
-  default = "dzR/Ol87Maizzl+ogMhTWHdMVVetSxUD7eDawk0p"
+  default = ""
 }
 
 variable "bucket_name" {
